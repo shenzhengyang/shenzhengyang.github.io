@@ -3,7 +3,7 @@ email:             zysh@mail.ustc.edu.cn
 description:       一只小白~坚持每天写~
 author:            memory.sh
 baseurl:           ""
-url:               "http://shenzhengyang.github.io"
+url:               "https://shenzhengyang.github.io"
 
 # Social Profiles
 github_username:   shenzhengyang

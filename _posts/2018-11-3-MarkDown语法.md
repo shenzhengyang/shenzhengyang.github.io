@@ -1,8 +1,10 @@
 ---
 layout: post
 author: memory.sh
+title:  "Markdown 常用语法"
+background: '/img/markdown/back.jpg'
 ---
-Markdown is a way to style text on the web. You control the display of the document; formaing words as
+Markdown is a way to style text on the web. You control the display of the document; formating words as
 bold or italic, adding images, and creating lists are just a few of the things we can do with Markdown. Mostly,
 Markdown is just regular text with a few non-alphabetic characters thrown in, like # or *.
 
@@ -100,3 +102,6 @@ Content column 1 | Content column 2
 ![emoji](/img/markdown/emoji.png)
 
 ![emoji2](/img/markdown/emoji2.png)
+
+## 参考文档
+[MarkDown](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)

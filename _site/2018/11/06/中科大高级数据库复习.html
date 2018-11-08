@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    中科大高级数据库复习 - Memory.sh 博客
+    
+  </title>
+
+  <meta name="description" content="高级数据的复习内容，更多详细课程课件，参看金培全老师主页：http://staff.ustc.edu.cn/~jpq。">
+
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="/assets/vendor/font-awesome/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/2018/11/06/%E4%B8%AD%E7%A7%91%E5%A4%A7%E9%AB%98%E7%BA%A7%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%8D%E4%B9%A0.html">
+  <link rel="alternate" type="application/rss+xml" title="Memory.sh 博客" href="/feed.xml">
+
+</head>
+
+
+  <body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="/">memory.sh blog</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">主页</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">关于我</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    <!-- Page Header -->
+
+<header class="masthead" style="background-image: url('/img/adb/back.jpg')">
+
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="post-heading">
+          <h1>中科大高级数据库复习</h1>
+          
+          <span class="meta">Posted by
+            <a href="#">memory.sh</a>
+            on November 06, 2018</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+
+      <p>高级数据的复习内容，更多详细课程课件，参看金培全老师主页：http://staff.ustc.edu.cn/~jpq。</p>
+
+<h1 id="数据库系统概述">数据库系统概述</h1>
+<h2 id="数据库系统基本概念">数据库系统基本概念</h2>
+<p><strong>1.数据</strong></p>
+
+<p>数据（data）是数据库中存储的基本对象。</p>
+
+<p>数据定义：人门用来反映客观世界而记录下来可以借鉴的符号。</p>
+
+<p>数据的种类：</p>
+<ul>
+  <li>数值数据：0-9</li>
+  <li>非数值数据：字符、文字、声音、图形、图像</li>
+</ul>
+
+<p>数据的特点：</p>
+<ul>
+  <li>数据与其语义不可分</li>
+</ul>
+
+<p>例子1：93是一个数据</p>
+<ul>
+  <li>语义1：学生某门课的成绩</li>
+  <li>语义2：某人的体重</li>
+</ul>
+
+<p>例子2：学生档案纪录（李明，197205，中国科大，1990）</p>
+<ul>
+  <li>语义1：学生，出生年月，所在学校，毕业年份</li>
+  <li>语义2： 学生，出生年月，录取大学，入学时间</li>
+</ul>
+
+<p><strong>2.数据库</strong></p>
+
+<p>数据库定义：数据库(Database,简称DB)是长期储存在计算机内、
+有组织的、可共享的大量数据的集合。</p>
+
+<p>数据库基本特征:</p>
+<ul>
+  <li>数据按一定的数据模型组织、描述和储存</li>
+  <li>可为各种用户共享</li>
+  <li>数据间联系密切，具有最小的冗余度和较高的独立性</li>
+  <li>服务于某个特定的应用</li>
+</ul>
+
+<p><strong>3.数据库模式Schema</strong></p>
+
+<p>数据库模式是数据库中全体数据的逻辑结构和特征的描述。
+<img src="/img/adb/1_schema.png" alt="schema" /></p>
+
+<p><strong>4.数据库管理系统</strong></p>
+
+<p>DBMS(Database Management System)，是计算机程序的集合，用于创建和维护数据库。</p>
+
+<ul>
+  <li>位于操作系统和用户应用之间</li>
+  <li>总是基于某种数据模型</li>
+  <li>数据库厂商产品通常指DBMS，如oracle 11g。</li>
+</ul>
+
+<p><strong>5.数据库系统</strong></p>
+
+<p>DBS（DataBase System），指在计算机系统中引入了数据库后的系统，即采用了数据库技术的计算机系统。
+<img src="/img/adb/1_dbs.png" alt="dbs" /></p>
+
+
+
+      <hr>
+
+      <div class="clearfix">
+
+        
+        <a class="btn btn-primary float-left" href="/2018/11/03/MarkDown%E8%AF%AD%E6%B3%95.html" data-toggle="tooltip" data-placement="top" title="Markdown 常用语法">&larr; 上一篇<span class="d-none d-md-inline"> </span></a>
+        
+        
+        <a class="btn btn-primary float-right" href="/2018/11/08/Bayesian-network.html" data-toggle="tooltip" data-placement="top" title="贝叶斯网络结构和证明">下一篇<span class="d-none d-md-inline"> </span> &rarr;</a>
+        
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+    <!-- Footer -->
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/shenzhengyang">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; memory.sh 2018</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <script src="/assets/vendor/jquery/jquery.min.js"></script>
+<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/startbootstrap-clean-blog/js/clean-blog.min.js"></script>
+
+<script src="/assets/scripts.js"></script>
+
+
+
+
+  </body>
+
+</html>

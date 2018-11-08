@@ -8,11 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>
-    Blog - Memory.sh 博客
+    贝叶斯网络结构和证明 - Memory.sh 博客
     
   </title>
 
-  <meta name="description" content="一只小白~坚持每天写~">
+  <meta name="description" content="本文介绍几种贝叶斯网络中的结构，如：顺序连接、分支连接、汇合连接，参考资料：贝叶斯网络。">
 
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="/assets/vendor/font-awesome/css/font-awesome.min.css">
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="http://localhost:4000/blog.html">
+  <link rel="canonical" href="http://localhost:4000/2018/11/08/Bayesian-network.html">
   <link rel="alternate" type="application/rss+xml" title="Memory.sh 博客" href="/feed.xml">
 
 </head>
@@ -52,34 +52,67 @@
 </nav>
 
 
-    <h1>Latest Posts</h1>
+    <!-- Page Header -->
 
-<ul>
-  
-    <li>
-      <h2><a href="/2018/11/08/Bayesian-network.html">贝叶斯网络结构和证明</a></h2>
-      <p><p>本文介绍几种贝叶斯网络中的结构，如：顺序连接、分支连接、汇合连接，参考资料：<a href="/img/beiyesi.pdf">贝叶斯网络</a>。</p>
+<header class="masthead" style="background-image: url('/img/bayesian/back.png')">
 
-</p>
-    </li>
-  
-    <li>
-      <h2><a href="/2018/11/06/%E4%B8%AD%E7%A7%91%E5%A4%A7%E9%AB%98%E7%BA%A7%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%8D%E4%B9%A0.html">中科大高级数据库复习</a></h2>
-      <p><p>高级数据的复习内容，更多详细课程课件，参看金培全老师主页：http://staff.ustc.edu.cn/~jpq。</p>
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="post-heading">
+          <h1>贝叶斯网络结构和证明</h1>
+          
+          <span class="meta">Posted by
+            <a href="#">memory.sh</a>
+            on November 08, 2018</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
 
-</p>
-    </li>
-  
-    <li>
-      <h2><a href="/2018/11/03/MarkDown%E8%AF%AD%E6%B3%95.html">Markdown 常用语法</a></h2>
-      <p><p>Markdown is a way to style text on the web. You control the display of the document; formating words as
-bold or italic, adding images, and creating lists are just a few of the things we can do with Markdown. Mostly,
-Markdown is just regular text with a few non-alphabetic characters thrown in, like # or *.</p>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
 
-</p>
-    </li>
-  
-</ul>
+      <p>本文介绍几种贝叶斯网络中的结构，如：顺序连接、分支连接、汇合连接，参考资料：<a href="/img/beiyesi.pdf">贝叶斯网络</a>。</p>
+
+<h2 id="顺序连接">顺序连接</h2>
+<p><img src="/img/bayesian/shunxu.png" alt="顺序连接" /></p>
+
+<p><em><strong>证明：</strong>给定Y的知识，那么X和Z独立。</em></p>
+
+<p><img src="/img/bayesian/1.png" alt="顺序证明" /></p>
+<h2 id="分支连接">分支连接</h2>
+<p><img src="/img/bayesian/fenzhi.png" alt="分支连接" /></p>
+
+<p><em><strong>证明：</strong>给定Y的知识，那么X和Z独立。</em></p>
+
+<p><img src="/img/bayesian/2.png" alt="分支证明" /></p>
+<h2 id="汇合连接">汇合连接</h2>
+<p><img src="/img/bayesian/huihe.png" alt="汇合连接" /></p>
+
+<p><em><strong>证明：</strong>Y未知时，X和Z独立。</em></p>
+
+<p><img src="/img/bayesian/3.png" alt="顺序证明" /></p>
+
+
+      <hr>
+
+      <div class="clearfix">
+
+        
+        <a class="btn btn-primary float-left" href="/2018/11/06/%E4%B8%AD%E7%A7%91%E5%A4%A7%E9%AB%98%E7%BA%A7%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%8D%E4%B9%A0.html" data-toggle="tooltip" data-placement="top" title="中科大高级数据库复习">&larr; 上一篇<span class="d-none d-md-inline"> </span></a>
+        
+        
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
 
     <!-- Footer -->
 

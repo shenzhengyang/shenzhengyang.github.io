@@ -1,4 +1,87 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-03T21:54:01+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Memory.sh 博客</title><subtitle>一只小白~坚持每天写~</subtitle><author><name>memory.sh</name></author><entry><title type="html">Markdown 常用语法</title><link href="http://localhost:4000/2018/11/03/MarkDown%E8%AF%AD%E6%B3%95.html" rel="alternate" type="text/html" title="Markdown 常用语法" /><published>2018-11-03T00:00:00+08:00</published><updated>2018-11-03T00:00:00+08:00</updated><id>http://localhost:4000/2018/11/03/MarkDown%E8%AF%AD%E6%B3%95</id><content type="html" xml:base="http://localhost:4000/2018/11/03/MarkDown%E8%AF%AD%E6%B3%95.html">&lt;p&gt;Markdown is a way to style text on the web. You control the display of the document; formating words as
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-08T22:28:36+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Memory.sh 博客</title><subtitle>一只小白~坚持每天写~</subtitle><author><name>memory.sh</name></author><entry><title type="html">贝叶斯网络结构和证明</title><link href="http://localhost:4000/2018/11/08/Bayesian-network.html" rel="alternate" type="text/html" title="贝叶斯网络结构和证明" /><published>2018-11-08T00:00:00+08:00</published><updated>2018-11-08T00:00:00+08:00</updated><id>http://localhost:4000/2018/11/08/Bayesian-network</id><content type="html" xml:base="http://localhost:4000/2018/11/08/Bayesian-network.html">&lt;p&gt;本文介绍几种贝叶斯网络中的结构，如：顺序连接、分支连接、汇合连接，参考资料：&lt;a href=&quot;/img/beiyesi.pdf&quot;&gt;贝叶斯网络&lt;/a&gt;。&lt;/p&gt;
+
+&lt;h2 id=&quot;顺序连接&quot;&gt;顺序连接&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/img/bayesian/shunxu.png&quot; alt=&quot;顺序连接&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;证明：&lt;/strong&gt;给定Y的知识，那么X和Z独立。&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/bayesian/1.png&quot; alt=&quot;顺序证明&quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;分支连接&quot;&gt;分支连接&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/img/bayesian/fenzhi.png&quot; alt=&quot;分支连接&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;证明：&lt;/strong&gt;给定Y的知识，那么X和Z独立。&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/bayesian/2.png&quot; alt=&quot;分支证明&quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;汇合连接&quot;&gt;汇合连接&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/img/bayesian/huihe.png&quot; alt=&quot;汇合连接&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;证明：&lt;/strong&gt;Y未知时，X和Z独立。&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/bayesian/3.png&quot; alt=&quot;顺序证明&quot; /&gt;&lt;/p&gt;</content><author><name>memory.sh</name></author><summary type="html">本文介绍几种贝叶斯网络中的结构，如：顺序连接、分支连接、汇合连接，参考资料：贝叶斯网络。</summary></entry><entry><title type="html">中科大高级数据库复习</title><link href="http://localhost:4000/2018/11/06/%E4%B8%AD%E7%A7%91%E5%A4%A7%E9%AB%98%E7%BA%A7%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%8D%E4%B9%A0.html" rel="alternate" type="text/html" title="中科大高级数据库复习" /><published>2018-11-06T00:00:00+08:00</published><updated>2018-11-06T00:00:00+08:00</updated><id>http://localhost:4000/2018/11/06/%E4%B8%AD%E7%A7%91%E5%A4%A7%E9%AB%98%E7%BA%A7%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%8D%E4%B9%A0</id><content type="html" xml:base="http://localhost:4000/2018/11/06/%E4%B8%AD%E7%A7%91%E5%A4%A7%E9%AB%98%E7%BA%A7%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%8D%E4%B9%A0.html">&lt;p&gt;高级数据的复习内容，更多详细课程课件，参看金培全老师主页：http://staff.ustc.edu.cn/~jpq。&lt;/p&gt;
+
+&lt;h1 id=&quot;数据库系统概述&quot;&gt;数据库系统概述&lt;/h1&gt;
+&lt;h2 id=&quot;数据库系统基本概念&quot;&gt;数据库系统基本概念&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;1.数据&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;数据（data）是数据库中存储的基本对象。&lt;/p&gt;
+
+&lt;p&gt;数据定义：人门用来反映客观世界而记录下来可以借鉴的符号。&lt;/p&gt;
+
+&lt;p&gt;数据的种类：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;数值数据：0-9&lt;/li&gt;
+  &lt;li&gt;非数值数据：字符、文字、声音、图形、图像&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;数据的特点：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;数据与其语义不可分&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;例子1：93是一个数据&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;语义1：学生某门课的成绩&lt;/li&gt;
+  &lt;li&gt;语义2：某人的体重&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;例子2：学生档案纪录（李明，197205，中国科大，1990）&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;语义1：学生，出生年月，所在学校，毕业年份&lt;/li&gt;
+  &lt;li&gt;语义2： 学生，出生年月，录取大学，入学时间&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;2.数据库&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;数据库定义：数据库(Database,简称DB)是长期储存在计算机内、
+有组织的、可共享的大量数据的集合。&lt;/p&gt;
+
+&lt;p&gt;数据库基本特征:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;数据按一定的数据模型组织、描述和储存&lt;/li&gt;
+  &lt;li&gt;可为各种用户共享&lt;/li&gt;
+  &lt;li&gt;数据间联系密切，具有最小的冗余度和较高的独立性&lt;/li&gt;
+  &lt;li&gt;服务于某个特定的应用&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;3.数据库模式Schema&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;数据库模式是数据库中全体数据的逻辑结构和特征的描述。
+&lt;img src=&quot;/img/adb/1_schema.png&quot; alt=&quot;schema&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4.数据库管理系统&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;DBMS(Database Management System)，是计算机程序的集合，用于创建和维护数据库。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;位于操作系统和用户应用之间&lt;/li&gt;
+  &lt;li&gt;总是基于某种数据模型&lt;/li&gt;
+  &lt;li&gt;数据库厂商产品通常指DBMS，如oracle 11g。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;5.数据库系统&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;DBS（DataBase System），指在计算机系统中引入了数据库后的系统，即采用了数据库技术的计算机系统。
+&lt;img src=&quot;/img/adb/1_dbs.png&quot; alt=&quot;dbs&quot; /&gt;&lt;/p&gt;</content><author><name>memory.sh</name></author><summary type="html">高级数据的复习内容，更多详细课程课件，参看金培全老师主页：http://staff.ustc.edu.cn/~jpq。</summary></entry><entry><title type="html">Markdown 常用语法</title><link href="http://localhost:4000/2018/11/03/MarkDown%E8%AF%AD%E6%B3%95.html" rel="alternate" type="text/html" title="Markdown 常用语法" /><published>2018-11-03T00:00:00+08:00</published><updated>2018-11-03T00:00:00+08:00</updated><id>http://localhost:4000/2018/11/03/MarkDown%E8%AF%AD%E6%B3%95</id><content type="html" xml:base="http://localhost:4000/2018/11/03/MarkDown%E8%AF%AD%E6%B3%95.html">&lt;p&gt;Markdown is a way to style text on the web. You control the display of the document; formating words as
 bold or italic, adding images, and creating lists are just a few of the things we can do with Markdown. Mostly,
 Markdown is just regular text with a few non-alphabetic characters thrown in, like # or *.&lt;/p&gt;
 

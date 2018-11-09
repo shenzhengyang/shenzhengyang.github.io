@@ -1,4 +1,99 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-08T22:28:36+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Memory.sh 博客</title><subtitle>一只小白~坚持每天写~</subtitle><author><name>memory.sh</name></author><entry><title type="html">贝叶斯网络结构和证明</title><link href="http://localhost:4000/2018/11/08/Bayesian-network.html" rel="alternate" type="text/html" title="贝叶斯网络结构和证明" /><published>2018-11-08T00:00:00+08:00</published><updated>2018-11-08T00:00:00+08:00</updated><id>http://localhost:4000/2018/11/08/Bayesian-network</id><content type="html" xml:base="http://localhost:4000/2018/11/08/Bayesian-network.html">&lt;p&gt;本文介绍几种贝叶斯网络中的结构，如：顺序连接、分支连接、汇合连接，参考资料：&lt;a href=&quot;/img/beiyesi.pdf&quot;&gt;贝叶斯网络&lt;/a&gt;。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-09T21:08:56+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Memory.sh 博客</title><subtitle>一只小白~坚持每天写~</subtitle><author><name>memory.sh</name></author><entry><title type="html">阿里-拍立淘架构分析</title><link href="http://localhost:4000/2018/11/09/visual-search-at-alibaba.html" rel="alternate" type="text/html" title="阿里-拍立淘架构分析" /><published>2018-11-09T00:00:00+08:00</published><updated>2018-11-09T00:00:00+08:00</updated><id>http://localhost:4000/2018/11/09/visual-search-at-alibaba</id><content type="html" xml:base="http://localhost:4000/2018/11/09/visual-search-at-alibaba.html">&lt;p&gt;分析了阿里在视觉搜索方面的应用-拍立淘。参考文献：&lt;a href=&quot;/article/visualsearch.pdf&quot;&gt;Visual Search At Alibaba&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;面对的挑战&quot;&gt;面对的挑战&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Heterogeneous images matching&lt;/li&gt;
+  &lt;li&gt;Billions of data with fine-grained categories&lt;/li&gt;
+  &lt;li&gt;Huge expense for maintaining training data&lt;/li&gt;
+  &lt;li&gt;Improving the user engagement&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;视觉搜索应用到的技术&quot;&gt;视觉搜索应用到的技术&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;CNN应用到实例检索
+    &lt;ol&gt;
+      &lt;li&gt;将CNN作为NeuralCode&lt;/li&gt;
+      &lt;li&gt;将全连接层的输出作为实例检索的特征&lt;/li&gt;
+      &lt;li&gt;编码CNN特征和卷积特征并映射到VLAD&lt;/li&gt;
+      &lt;li&gt;max-pooling作用到所有卷积特征上，产生有效的视觉符号&lt;/li&gt;
+      &lt;li&gt;问题：阿里视觉搜索重点关注图像中目标对象，而非整个图像&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;深度度量嵌入：在图片的相似性度量上有很好的性能
+    &lt;ol&gt;
+      &lt;li&gt;在线硬采样挖掘，计算triplet loss+用户点击习惯&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;弱监督对象定位
+    &lt;ol&gt;
+      &lt;li&gt;自学习对象定位-掩模(masking)&lt;/li&gt;
+      &lt;li&gt;结合多个实例的CNN特征定位&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;主要工作&quot;&gt;主要工作&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;介绍一种高效的类别预测方法
+该方法结合了模型和基于搜索的&lt;/li&gt;
+  &lt;li&gt;提出一种深度CNN模型，用于联合检测和特征学习&lt;/li&gt;
+  &lt;li&gt;在应用部署阶段，利用二进制索引和重排序完成检索&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;可视化搜索架构&quot;&gt;可视化搜索架构&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;架构概览
+    &lt;blockquote&gt;
+      &lt;p&gt;该架构主要分为在线处理和离线处理两个部分。离线处理：主要工作是建立索引文档。
+文档主要包括属性选择、离线特征提取、索引建立。在线处理：主要包括用户上传图片
+的种类预测、在线检测、特征提取，最后返回索引和重拍后的结果。
+&lt;img src=&quot;/img/visualsearch/overview.png&quot; alt=&quot;架构概览&quot; /&gt;&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;种类预测
+    &lt;ol&gt;
+      &lt;li&gt;过滤图片&lt;/li&gt;
+      &lt;li&gt;聚合模型和基于搜索的方法
+        &lt;blockquote&gt;
+          &lt;p&gt;在模型方面，采用GoogleNet V1。训练集为多种类带标签的库存子集。输入的图像
+大小为256X256，并随机裁剪为227x227。使用训练过程使用标准的softmax-loss。
+在基于搜索方面，利用深度网络输出的特征，在200亿参考图片中，索引Top30的结果。
+并给与每个结果一个权重去预测类别。&lt;/p&gt;
+        &lt;/blockquote&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;联合检测和特征学习
+    &lt;blockquote&gt;
+      &lt;p&gt;为了匹配买家和卖家之间的图片，提出了一中基于深度度量学习的带分支的深度CNN模型。
+该模型能够同时对象检测和特征学习。&lt;/p&gt;
+    &lt;/blockquote&gt;
+    &lt;ol&gt;
+      &lt;li&gt;PVLOG triplet 挖掘
+  &lt;img src=&quot;/img/visualsearch/triplets.png&quot; alt=&quot;Triplets&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;深度排序框架
+  &lt;img src=&quot;/img/visualsearch/joint.png&quot; alt=&quot;Joint&quot; /&gt;
+        &lt;blockquote&gt;
+
+          &lt;p&gt;&lt;img src=&quot;/img/visualsearch/rank.png&quot; alt=&quot;Rank&quot; /&gt;&lt;/p&gt;
+        &lt;/blockquote&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;图像索引和检索
+    &lt;blockquote&gt;
+      &lt;p&gt;为了适应实时和稳定的效果采用了&lt;strong&gt;多重复&lt;/strong&gt;和&lt;strong&gt;多分片&lt;/strong&gt;的搜索引擎架构。
+多分片：使用多个机器去存储完整的数据集，每个分片保存完整数据集的子集。
+对于每一个请求，每个分片节点搜索自己的子集并返回K个结果，之后，
+将这每个分片的结果排序合并产生最终的K个结果。
+多重度：多个重复的机器。假设我们同时有Q请求访问系统，我们将这Q个请求分成R
+份，每一部分有Q/R个请求。使用这种方法，将一个索引集群需要处理Q个请求降低到了Q/R。
+  &lt;img src=&quot;/img/visualsearch/search.png&quot; alt=&quot;Search&quot; /&gt;&lt;/p&gt;
+      &lt;h2 id=&quot;参考文献&quot;&gt;参考文献&lt;/h2&gt;
+      &lt;p&gt;&lt;a href=&quot;/article/visualsearch.pdf&quot;&gt;Visual Search At Alibaba&lt;/a&gt;&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>memory.sh</name></author><summary type="html">分析了阿里在视觉搜索方面的应用-拍立淘。参考文献：Visual Search At Alibaba</summary></entry><entry><title type="html">贝叶斯网络结构和证明</title><link href="http://localhost:4000/2018/11/08/Bayesian-network.html" rel="alternate" type="text/html" title="贝叶斯网络结构和证明" /><published>2018-11-08T00:00:00+08:00</published><updated>2018-11-08T00:00:00+08:00</updated><id>http://localhost:4000/2018/11/08/Bayesian-network</id><content type="html" xml:base="http://localhost:4000/2018/11/08/Bayesian-network.html">&lt;p&gt;本文介绍几种贝叶斯网络中的结构，如：顺序连接、分支连接、汇合连接，参考资料：&lt;a href=&quot;/article/beiyesi.pdf&quot;&gt;贝叶斯网络&lt;/a&gt;。&lt;/p&gt;
 
 &lt;h2 id=&quot;顺序连接&quot;&gt;顺序连接&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&quot;/img/bayesian/shunxu.png&quot; alt=&quot;顺序连接&quot; /&gt;&lt;/p&gt;
@@ -81,7 +176,12 @@
 &lt;p&gt;&lt;strong&gt;5.数据库系统&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;DBS（DataBase System），指在计算机系统中引入了数据库后的系统，即采用了数据库技术的计算机系统。
-&lt;img src=&quot;/img/adb/1_dbs.png&quot; alt=&quot;dbs&quot; /&gt;&lt;/p&gt;</content><author><name>memory.sh</name></author><summary type="html">高级数据的复习内容，更多详细课程课件，参看金培全老师主页：http://staff.ustc.edu.cn/~jpq。</summary></entry><entry><title type="html">Markdown 常用语法</title><link href="http://localhost:4000/2018/11/03/MarkDown%E8%AF%AD%E6%B3%95.html" rel="alternate" type="text/html" title="Markdown 常用语法" /><published>2018-11-03T00:00:00+08:00</published><updated>2018-11-03T00:00:00+08:00</updated><id>http://localhost:4000/2018/11/03/MarkDown%E8%AF%AD%E6%B3%95</id><content type="html" xml:base="http://localhost:4000/2018/11/03/MarkDown%E8%AF%AD%E6%B3%95.html">&lt;p&gt;Markdown is a way to style text on the web. You control the display of the document; formating words as
+&lt;img src=&quot;/img/adb/1_dbs.png&quot; alt=&quot;dbs&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;index-structure&quot;&gt;Index Structure&lt;/h1&gt;
+&lt;h2 id=&quot;顺序索引&quot;&gt;顺序索引&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;密集索引&lt;/strong&gt;&lt;/p&gt;</content><author><name>memory.sh</name></author><summary type="html">高级数据的复习内容，更多详细课程课件，参看金培全老师主页：http://staff.ustc.edu.cn/~jpq。</summary></entry><entry><title type="html">Markdown 常用语法</title><link href="http://localhost:4000/2018/11/03/MarkDown%E8%AF%AD%E6%B3%95.html" rel="alternate" type="text/html" title="Markdown 常用语法" /><published>2018-11-03T00:00:00+08:00</published><updated>2018-11-03T00:00:00+08:00</updated><id>http://localhost:4000/2018/11/03/MarkDown%E8%AF%AD%E6%B3%95</id><content type="html" xml:base="http://localhost:4000/2018/11/03/MarkDown%E8%AF%AD%E6%B3%95.html">&lt;p&gt;Markdown is a way to style text on the web. You control the display of the document; formating words as
 bold or italic, adding images, and creating lists are just a few of the things we can do with Markdown. Mostly,
 Markdown is just regular text with a few non-alphabetic characters thrown in, like # or *.&lt;/p&gt;
 

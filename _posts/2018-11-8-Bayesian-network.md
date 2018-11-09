@@ -4,7 +4,7 @@ author: memory.sh
 title:  "贝叶斯网络结构和证明"
 background: '/img/bayesian/back.png'
 ---
-本文介绍几种贝叶斯网络中的结构，如：顺序连接、分支连接、汇合连接，参考资料：[贝叶斯网络](/img/beiyesi.pdf)。
+本文介绍几种贝叶斯网络中的结构，如：顺序连接、分支连接、汇合连接，参考资料：[贝叶斯网络](/article/beiyesi.pdf)。
 
 ## 顺序连接
 ![顺序连接](/img/bayesian/shunxu.png)

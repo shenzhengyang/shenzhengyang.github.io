@@ -12,8 +12,9 @@
   <script type="text/javascript">
     var button = document.getElementById("bt");
     var txt = document.getElementById("nums");
-    document.getElementById("bt").onclick(function(){
+    document.getElementById("bt").onclick = function(){
       alert("shen");
-    });
+      txt.innerHTML = "test";
+    }
   </script>
 <html>

@@ -12,8 +12,20 @@
   <script type="text/javascript">
     var button = document.getElementById("bt");
     var txt = document.getElementById("nums");
+    
+    function getRandomList(s, e, n) {
+      var arr = [];
+      for(var i=s; i<=e; i++){
+        arr.push(i);
+      }
+      arr.sort(function(a,b){
+        return Math.random()-0.5;
+      })
+      return arr.slice(0,n);
+    }
+    
     document.getElementById("bt").onclick = function(){
-      alert("shen");
+      alert(getRandomList(1,35,5));
       txt.innerHTML = "test";
     }
   </script>

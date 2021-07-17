@@ -21,23 +21,24 @@
       arr.sort(function(a,b){
         return Math.random()-0.5;
       })
-      return arr.slice(0,n);
+      return arr.slice(0,n).sort(function(a, b){
+        return a <= b;
+      });
     }
     
     document.getElementById("bt").onclick = function(){
-      alert(getRandomList(1,35,5));
       var white = getRandomList(1,35,5);
       var black = getRandomList(1,12,2);
       var ret = "大乐透随机号码：";
       for(var i=0; i<white.length-1; i++){
         ret += white[i] + "-";
       }
-      ret += white[-1] + " ";
+      ret += white[white.length-1] + " ";
       
       for(var i=0; i<black.length-1; i++){
         ret += black[i] + "-";
       }
-      ret += black[-1];
+      ret += black[black.length-1];
       txt.innerHTML = ret;
     }
   </script>
